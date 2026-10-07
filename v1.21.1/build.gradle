@@ -1,0 +1,75 @@
+plugins {
+    id 'java-library'
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.88' // Актуальная версия плагина ModDevGradle для 1.21.1
+}
+
+version = "${mod_version}"
+group = "${mod_group}"
+
+base {
+    archivesName = "${mod_id}"
+}
+
+// NeoForge 1.21.1 требует Java 21
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+
+neoForge {
+    // Версия NeoForge указывается здесь или подтягивается из gradle.properties
+    version = "${neo_version}"
+
+    // Настройка окружений (запуск клиента, сервера и т.д.)
+    runs {
+        client {
+            client()
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            systemProperty 'forge.logging.console.level', 'debug'
+        }
+        server {
+            server()
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            systemProperty 'forge.logging.console.level', 'debug'
+            // аргументы запуска при необходимости: programArgument '--nogui'
+        }
+        data {
+            data()
+            // Настройка генерации дата-паков/ресурсов
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').absolutePath
+        }
+    }
+
+    // Определение вашего мода для плагина
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+
+// Пути к исходникам ресурсов
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+
+
+repositories {
+    maven { url 'https://dl.cloudsmith.io/public/geckolib3/geckolib/maven/' }
+    mavenCentral()
+}
+    // Дополнительные репозитории (например, для JEI, Curios и т.д.)
+    // maven { url = 'https://progwml6.com' } // JEI
+}
+
+
+dependencies {
+    implementation 'software.bernie.geckolib:geckolib-neoforge-1.21.1:4.6.6'
+
+    // Ваши зависимости (implementation, compileOnly и др.)
+    // Пример подключения мода через jar-in-jar или локально:
+    // implementation "com.example:modname:version"
+}
+
+// Корректная обработка кодировки при сборке
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}

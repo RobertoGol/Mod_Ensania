@@ -1,0 +1,6 @@
+{
+  "variants": {
+    "activated=false": { "model": "trendybta:block/usb_charger" },
+    "activated=true":  { "model": "trendybta:block/usb_charger_active" }
+  }
+}

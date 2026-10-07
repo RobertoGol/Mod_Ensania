@@ -1,0 +1,31 @@
+modLoader="javafml" # Указывает, что мы используем Java для загрузки
+loaderVersion="[21,)" # Версия загрузчика NeoForge для 1.21.x
+license="MIT" # Лицензия твоего мода
+issueTrackerURL="https://github.com/твое_имя/TrendyBTA/issues" # Можно убрать, если нет GitHub
+
+[[mods]]
+modId="trendybta" # Уникальный ID мода (обязательно маленькими буквами, как в коде)
+version="1.0.0" # Текущая версия мода
+displayName="Trendy BTA & Companions" # Название, которое будет видно в игре
+authors="Твой_Никнейм" # Имя автора
+description='''
+Глобальный мод, возвращающий вырезанный контент (рубины, колчаны), 
+добавляющий контент из Better Than Adventure (Троммель, Ультра-печь), 
+а также умных роботов-компаньонов и вездеходные вагонетки.
+'''
+
+# Зависимость от самого Minecraft
+[[dependencies.trendybta]]
+    modId="minecraft"
+    mandatory=true
+    versionRange="[1.21.1,1.22)"
+    ordering="NONE"
+    side="BOTH"
+
+# Зависимость от NeoForge
+[[dependencies.trendybta]]
+    modId="neoforge"
+    mandatory=true
+    versionRange="[21.0,)"
+    ordering="NONE"
+    side="BOTH"
