@@ -1,0 +1,419 @@
+Структура папок тома Projects
+Серийный номер тома: 5A3A-B5FB
+J:.
+|   build.gradle
+|   gradle.properties
+|   settings.gradle
+|   tree.txt
+|   
++---gradle
+\---src
+    \---main
+        +---java
+        |   \---com
+        |       \---trendy
+        |           \---bta
+        |               |   ClientModEvents.java
+        |               |   TrendyBTA.java
+        |               |   
+        |               +---client
+        |               |   |   ClientForgeEvents.java
+        |               |   |   ClientModEvents.java
+        |               |   |   
+        |               |   +---model
+        |               |   |       TinyCompanionModel.java
+        |               |   |       
+        |               |   \---renderer
+        |               |           TinyCompanionRenderer.java
+        |               |           
+        |               +---entity
+        |               |   \---custom
+        |               |           TinyCompanionEntity.java
+        |               |           UltraLocomotiveEntity.java
+        |               |           
+        |               \---registry
+        |                       ModBlocks.java
+        |                       ModEntities.java
+        |                       ModEventBusEvents.java
+        |                       ModItems.java
+        |                       
+        \---resources
+            +---assets
+            |   +---entity
+            |   |       ankle_monitor.png
+            |   |       smarter_watch.png
+            |   |       
+            |   \---trendybta
+            |       +---blockstates
+            |       |       book_box.json
+            |       |       usb_charger.json
+            |       |       
+            |       +---models
+            |       |   +---block
+            |       |   |       book_box.json
+            |       |   |       book_box_a.json
+            |       |   |       book_box_b.json
+            |       |   |       book_box_c.json
+            |       |   |       book_box_d.json
+            |       |   |       usb_charger.json
+            |       |   |       
+            |       |   \---item
+            |       |           ankle_monitor.json
+            |       |           banner_overlay.json
+            |       |           reality_vision.json
+            |       |           ruby.json
+            |       |           smarter_watch.json
+            |       |           usb_charger.json
+            |       |           
+            |       +---shaders
+            |       |   +---post
+            |       |   |       antialias.json
+            |       |   |       art.json
+            |       |   |       bits.json
+            |       |   |       blobs.json
+            |       |   |       blobs2.json
+            |       |   |       bloom.json
+            |       |   |       blur.json
+            |       |   |       bumpy.json
+            |       |   |       color_convolve.json
+            |       |   |       creeper.json
+            |       |   |       deconverge.json
+            |       |   |       desaturate.json
+            |       |   |       entity_outline.json
+            |       |   |       flip.json
+            |       |   |       fxaa.json
+            |       |   |       green.json
+            |       |   |       invert.json
+            |       |   |       notch.json
+            |       |   |       ntsc.json
+            |       |   |       outline.json
+            |       |   |       pencil.json
+            |       |   |       phosphor.json
+            |       |   |       scan_pincushion.json
+            |       |   |       sobel.json
+            |       |   |       spider.json
+            |       |   |       transparency.json
+            |       |   |       wobble.json
+            |       |   |       
+            |       |   \---program
+            |       |           antialias.fsh
+            |       |           antialias.json
+            |       |           bits.fsh
+            |       |           bits.json
+            |       |           blit.fsh
+            |       |           blit.json
+            |       |           blit.vsh
+            |       |           blit_screen.fsh
+            |       |           blit_screen.json
+            |       |           blit_screen.vsh
+            |       |           blobs.fsh
+            |       |           blobs.json
+            |       |           blobs.vsh
+            |       |           blobs2.fsh
+            |       |           blobs2.json
+            |       |           block.fsh
+            |       |           block.json
+            |       |           block.vsh
+            |       |           bloom.json
+            |       |           blur.fsh
+            |       |           blur.json
+            |       |           brightness_threshold.fsh
+            |       |           brightness_threshold.json
+            |       |           bumpy.fsh
+            |       |           bumpy.json
+            |       |           bumpy.vsh
+            |       |           color_convolve.fsh
+            |       |           color_convolve.json
+            |       |           deconverge.fsh
+            |       |           deconverge.json
+            |       |           downscale.fsh
+            |       |           downscale.json
+            |       |           downscale.vsh
+            |       |           entity_outline.json
+            |       |           entity_sobel.fsh
+            |       |           flip.json
+            |       |           flip.vsh
+            |       |           fxaa.fsh
+            |       |           fxaa.json
+            |       |           fxaa.vsh
+            |       |           invert.fsh
+            |       |           invert.json
+            |       |           invert.vsh
+            |       |           merge_bloom.fsh
+            |       |           merge_bloom.json
+            |       |           new_entity.fsh
+            |       |           new_entity.json
+            |       |           new_entity.vsh
+            |       |           notch.fsh
+            |       |           notch.json
+            |       |           ntsc_decode.fsh
+            |       |           ntsc_decode.json
+            |       |           ntsc_encode.fsh
+            |       |           ntsc_encode.json
+            |       |           outline.fsh
+            |       |           outline.json
+            |       |           outline_combine.fsh
+            |       |           outline_combine.json
+            |       |           outline_soft.fsh
+            |       |           outline_soft.json
+            |       |           outline_watercolor.fsh
+            |       |           outline_watercolor.json
+            |       |           overlay.fsh
+            |       |           overlay.json
+            |       |           particle.fsh
+            |       |           particle.json
+            |       |           particle.vsh
+            |       |           phosphor.fsh
+            |       |           phosphor.json
+            |       |           position.fsh
+            |       |           position.json
+            |       |           position.vsh
+            |       |           position_color.fsh
+            |       |           position_color.json
+            |       |           position_color.vsh
+            |       |           position_color_lightmap.fsh
+            |       |           position_color_lightmap.json
+            |       |           position_color_lightmap.vsh
+            |       |           position_color_normal.fsh
+            |       |           position_color_normal.json
+            |       |           position_color_normal.vsh
+            |       |           position_color_tex.fsh
+            |       |           position_color_tex.json
+            |       |           position_color_tex.vsh
+            |       |           position_color_tex_lightmap.fsh
+            |       |           position_color_tex_lightmap.json
+            |       |           position_color_tex_lightmap.vsh
+            |       |           position_tex.fsh
+            |       |           position_tex.json
+            |       |           position_tex.vsh
+            |       |           position_tex_color.fsh
+            |       |           position_tex_color.json
+            |       |           position_tex_color.vsh
+            |       |           position_tex_color_normal.fsh
+            |       |           position_tex_color_normal.json
+            |       |           position_tex_color_normal.vsh
+            |       |           position_tex_funky.fsh
+            |       |           position_tex_funky.json
+            |       |           position_tex_lightmap_color.fsh
+            |       |           position_tex_lightmap_color.json
+            |       |           position_tex_lightmap_color.vsh
+            |       |           rendertype_armor_cutout_no_cull.fsh
+            |       |           rendertype_armor_cutout_no_cull.json
+            |       |           rendertype_armor_cutout_no_cull.vsh
+            |       |           rendertype_armor_entity_glint.fsh
+            |       |           rendertype_armor_entity_glint.json
+            |       |           rendertype_armor_entity_glint.vsh
+            |       |           rendertype_armor_glint.fsh
+            |       |           rendertype_armor_glint.json
+            |       |           rendertype_armor_glint.vsh
+            |       |           rendertype_beacon_beam.fsh
+            |       |           rendertype_beacon_beam.json
+            |       |           rendertype_beacon_beam.vsh
+            |       |           rendertype_crumbling.fsh
+            |       |           rendertype_crumbling.json
+            |       |           rendertype_crumbling.vsh
+            |       |           rendertype_cutout.fsh
+            |       |           rendertype_cutout.json
+            |       |           rendertype_cutout.vsh
+            |       |           rendertype_cutout_mipped.fsh
+            |       |           rendertype_cutout_mipped.json
+            |       |           rendertype_cutout_mipped.vsh
+            |       |           rendertype_end_gateway.json
+            |       |           rendertype_end_portal.fsh
+            |       |           rendertype_end_portal.json
+            |       |           rendertype_end_portal.vsh
+            |       |           rendertype_energy_swirl.fsh
+            |       |           rendertype_energy_swirl.json
+            |       |           rendertype_energy_swirl.vsh
+            |       |           rendertype_entity_alpha.fsh
+            |       |           rendertype_entity_alpha.json
+            |       |           rendertype_entity_alpha.vsh
+            |       |           rendertype_entity_cutout.fsh
+            |       |           rendertype_entity_cutout.json
+            |       |           rendertype_entity_cutout.vsh
+            |       |           rendertype_entity_cutout_no_cull.fsh
+            |       |           rendertype_entity_cutout_no_cull.json
+            |       |           rendertype_entity_cutout_no_cull.vsh
+            |       |           rendertype_entity_cutout_no_cull_z_offset.fsh
+            |       |           rendertype_entity_cutout_no_cull_z_offset.json
+            |       |           rendertype_entity_cutout_no_cull_z_offset.vsh
+            |       |           rendertype_entity_decal.fsh
+            |       |           rendertype_entity_decal.json
+            |       |           rendertype_entity_decal.vsh
+            |       |           rendertype_entity_glint.fsh
+            |       |           rendertype_entity_glint.json
+            |       |           rendertype_entity_glint.vsh
+            |       |           rendertype_entity_glint_direct.fsh
+            |       |           rendertype_entity_glint_direct.json
+            |       |           rendertype_entity_glint_direct.vsh
+            |       |           rendertype_entity_no_outline.fsh
+            |       |           rendertype_entity_no_outline.json
+            |       |           rendertype_entity_no_outline.vsh
+            |       |           rendertype_entity_shadow.fsh
+            |       |           rendertype_entity_shadow.json
+            |       |           rendertype_entity_shadow.vsh
+            |       |           rendertype_entity_smooth_cutout.fsh
+            |       |           rendertype_entity_smooth_cutout.json
+            |       |           rendertype_entity_smooth_cutout.vsh
+            |       |           rendertype_entity_solid.fsh
+            |       |           rendertype_entity_solid.json
+            |       |           rendertype_entity_solid.vsh
+            |       |           rendertype_entity_translucent.fsh
+            |       |           rendertype_entity_translucent.json
+            |       |           rendertype_entity_translucent.vsh
+            |       |           rendertype_entity_translucent_cull.fsh
+            |       |           rendertype_entity_translucent_cull.json
+            |       |           rendertype_entity_translucent_cull.vsh
+            |       |           rendertype_entity_translucent_emissive.fsh
+            |       |           rendertype_entity_translucent_emissive.json
+            |       |           rendertype_entity_translucent_emissive.vsh
+            |       |           rendertype_eyes.fsh
+            |       |           rendertype_eyes.json
+            |       |           rendertype_eyes.vsh
+            |       |           rendertype_glint.fsh
+            |       |           rendertype_glint.json
+            |       |           rendertype_glint.vsh
+            |       |           rendertype_glint_direct.fsh
+            |       |           rendertype_glint_direct.json
+            |       |           rendertype_glint_direct.vsh
+            |       |           rendertype_glint_translucent.fsh
+            |       |           rendertype_glint_translucent.json
+            |       |           rendertype_glint_translucent.vsh
+            |       |           rendertype_item_entity_translucent_cull.fsh
+            |       |           rendertype_item_entity_translucent_cull.json
+            |       |           rendertype_item_entity_translucent_cull.vsh
+            |       |           rendertype_leash.fsh
+            |       |           rendertype_leash.json
+            |       |           rendertype_leash.vsh
+            |       |           rendertype_lightning.fsh
+            |       |           rendertype_lightning.json
+            |       |           rendertype_lightning.vsh
+            |       |           rendertype_lines.fsh
+            |       |           rendertype_lines.json
+            |       |           rendertype_lines.vsh
+            |       |           rendertype_outline.fsh
+            |       |           rendertype_outline.json
+            |       |           rendertype_outline.vsh
+            |       |           rendertype_solid.fsh
+            |       |           rendertype_solid.json
+            |       |           rendertype_solid.vsh
+            |       |           rendertype_text.fsh
+            |       |           rendertype_text.json
+            |       |           rendertype_text.vsh
+            |       |           rendertype_text_background.fsh
+            |       |           rendertype_text_background.json
+            |       |           rendertype_text_background.vsh
+            |       |           rendertype_text_background_see_through.fsh
+            |       |           rendertype_text_background_see_through.json
+            |       |           rendertype_text_background_see_through.vsh
+            |       |           rendertype_text_intensity.fsh
+            |       |           rendertype_text_intensity.json
+            |       |           rendertype_text_intensity.vsh
+            |       |           rendertype_text_intensity_see_through.fsh
+            |       |           rendertype_text_intensity_see_through.json
+            |       |           rendertype_text_intensity_see_through.vsh
+            |       |           rendertype_text_see_through.fsh
+            |       |           rendertype_text_see_through.json
+            |       |           rendertype_text_see_through.vsh
+            |       |           rendertype_translucent.fsh
+            |       |           rendertype_translucent.json
+            |       |           rendertype_translucent.vsh
+            |       |           rendertype_translucent_moving_block.fsh
+            |       |           rendertype_translucent_moving_block.json
+            |       |           rendertype_translucent_moving_block.vsh
+            |       |           rendertype_translucent_no_crumbling.fsh
+            |       |           rendertype_translucent_no_crumbling.json
+            |       |           rendertype_translucent_no_crumbling.vsh
+            |       |           rendertype_tripwire.fsh
+            |       |           rendertype_tripwire.json
+            |       |           rendertype_tripwire.vsh
+            |       |           rendertype_water_mask.fsh
+            |       |           rendertype_water_mask.json
+            |       |           rendertype_water_mask.vsh
+            |       |           rotscale.vsh
+            |       |           scan_pincushion.fsh
+            |       |           scan_pincushion.json
+            |       |           screenquad.vsh
+            |       |           sobel.fsh
+            |       |           sobel.json
+            |       |           sobel.vsh
+            |       |           spider.json
+            |       |           spiderclip.fsh
+            |       |           transparency.fsh
+            |       |           transparency.json
+            |       |           wobble.fsh
+            |       |           wobble.json
+            |       |           
+            |       \---textures
+            |           +---block
+            |           |       book_box_a.png
+            |           |       book_box_b.png
+            |           |       book_box_c.png
+            |           |       book_box_d.png
+            |           |       book_box_e.png
+            |           |       coal_block.png
+            |           |       coal_block_active.png
+            |           |       lodestone_side.png
+            |           |       lodestone_side_active.png
+            |           |       lodestone_top.png
+            |           |       lodestone_top_active.png
+            |           |       usb_charger.json
+            |           |       usb_charger_active.json
+            |           |       usb_charger_bottom.png
+            |           |       usb_charger_bottom_active.png
+            |           |       usb_charger_side.png
+            |           |       usb_charger_side_active.png
+            |           |       usb_charger_top.png
+            |           |       usb_charger_top_active.png
+            |           |       
+            |           +---entity
+            |           |   |   ankle_monitor.png
+            |           |   |   banner_base.png
+            |           |   |   sign.png
+            |           |   |   sign2-do_not_use.png
+            |           |   |   smarter_watch.png
+            |           |   |   
+            |           |   \---chest
+            |           |           christmas.png
+            |           |           christmas_double.png
+            |           |           ender.png
+            |           |           normal.png
+            |           |           normal_double.png
+            |           |           trapped.png
+            |           |           trapped_double.png
+            |           |           
+            |           +---gui
+            |           |       demo_background.png
+            |           |       
+            |           +---item
+            |           |       ankle_monitor.png
+            |           |       banner_base.png
+            |           |       banner_overlay.png
+            |           |       quiver.png
+            |           |       reality_vision.png
+            |           |       ruby.png
+            |           |       smarter_watch.png
+            |           |       
+            |           +---misc
+            |           |       cantseeshitcaptain.png
+            |           |       enchanted_item_glint.png
+            |           |       enchanted_item_glint.png.mcmeta
+            |           |       forcefield.png
+            |           |       pumpkinblur.png
+            |           |       pumpkinblur.png.mcmeta
+            |           |       shadow.png
+            |           |       shadow.png.mcmeta
+            |           |       underwater.png
+            |           |       unknown_pack.png
+            |           |       unknown_server.png
+            |           |       vignette.png
+            |           |       vignette.png.mcmeta
+            |           |       vision_model.png
+            |           |       
+            |           \---particle
+            |                   particles.png
+            |                   
+            +---data
+            \---META-INF
+                    neoforge.mods.toml
+                    

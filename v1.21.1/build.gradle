@@ -1,0 +1,56 @@
+plugins {
+    id 'java-library'
+    id 'eclipse'
+    id 'idea'
+    id 'maven-publish'
+    id 'net.neoforged.moddev' version '2.0.107'
+}
+version = "${mod_version}"
+group = "${mod_group}"
+base {
+    archivesName = "${mod_id}"
+}
+// NeoForge 1.21.11 требует Java 21
+java.toolchain.languageVersion = JavaLanguageVersion.of(21)
+neoForge {
+    // Версия NeoForge под MC 1.21.11
+    version = "21.11.0-beta"
+    runs {
+        client {
+            client()
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            systemProperty 'forge.logging.console.level', 'debug'
+        }
+        server {
+            server()
+            systemProperty 'forge.logging.markers', 'REGISTRIES'
+            systemProperty 'forge.logging.console.level', 'debug'
+        }
+        data {
+            data()
+            programArguments.addAll '--mod', project.mod_id, '--all', '--output', file('src/generated/resources/').absolutePath
+        }
+    }
+    mods {
+        "${mod_id}" {
+            sourceSet sourceSets.main
+        }
+    }
+}
+// Пуси к исходникам ресурсов
+sourceSets.main.resources { srcDir 'src/generated/resources' }
+repositories {
+    mavenCentral()
+}
+dependencies {
+    // NeoForge и NeoForge API
+    neoForge 'net.neoforged:neoforge:21.11.0-beta'
+    // Обязательные зависимости для современного NeoForge
+    implementation 'com.mojang:blaze3d:18.104.22.168'
+    implementation 'com.mojang:cloth-config-core:3.0.4'
+}
+// Корректная обработка кодировки при сборке
+tasks.withType(JavaCompile).configureEach {
+    options.encoding = 'UTF-8'
+}
+

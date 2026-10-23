@@ -1,0 +1,8 @@
+{
+  "parent": "minecraft:block/cube_bottom_top",
+  "textures": {
+    "bottom": "trendybta:block/usb_charger_bottom_active",
+    "top": "trendybta:block/usb_charger_top_active",
+    "side": "trendybta:block/usb_charger_side_active"
+  }
+}

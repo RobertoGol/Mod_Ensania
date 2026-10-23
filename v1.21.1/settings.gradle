@@ -1,0 +1,14 @@
+pluginManagement {
+    repositories {
+        mavenLocal()
+        maven { url = 'https://neoforged.net' }
+        gradlePluginPortal()
+    }
+}
+
+plugins {
+    // Позволяет централизованно управлять версией плагина ModDevGradle
+    id 'net.neoforged.moddev' version '2.0.88'
+}
+
+rootProject.name = 'trendybta'
