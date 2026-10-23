@@ -8,7 +8,7 @@ import com.trendy.bta.block.entity.UsbChargerBlockEntity;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.level.block.entity.BlockEntityType;
 import net.neoforged.neoforge.registries.DeferredRegister;
-import java.util.function.Supplier;
+import java.util.function.Supplier; 
 
 public class ModBlockEntities {
     public static final DeferredRegister<BlockEntityType<?>> BLOCK_ENTITIES = DeferredRegister.create(Registries.BLOCK_ENTITY_TYPE, TrendyBTA.MOD_ID);
